@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(168deg, #2e335a 1.62%, #1c1b33 95.72%);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+.heading {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin: 45px 0 47px 0;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 47px;
+}
+.search-area {
+  display: flex;
+  align-items: center;
+  width: 596px;
+  height: 66px;
+  padding: 7px 8px;
+  border-radius: 10px;
+  background: linear-gradient(
+    168deg,
+    rgba(46, 51, 90, 0.26) 1.62%,
+    rgba(28, 27, 51, 0.26) 95.72%
+  );
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+.inputField {
+  width: 326.37px;
+  color: rgba(235, 235, 245, 0.6);
+  font-size: 17px;
+  font-weight: 400;
+  background: transparent;
+  border: none;
+  outline: none;
+  /* line-height: 22px; */
+}
+.search-area > span {
+  color: rgba(235, 235, 245, 0.6);
+  margin-right: 10px;
+}
+.search-btn {
+  width: 188px;
+  height: 66px;
+  border-radius: 10px;
+  background: rgba(74, 57, 127, 0.7);
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Card section  */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  gap: 60px;
+  margin: 0 130px 0 85px;
+}
+.card {
+  width: 342px;
+  height: 175px;
+  background: linear-gradient(90deg, #5936b4 0%, #362a84 103.55%);
+  /* background-image: url('/assets/Rectangle\ 1.png'); */
+  border-radius: 20px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.leftSide {
+  height: 184px;
+  width: 100%;
+}
+.temp {
+  color: #fff;
+  font-size: 64px;
+  font-weight: 400;
+}
+.par{
+    display: flex;
+    height: 130px;
+    justify-content: space-between;
+}
+.mur{
+    display: flex;
+    justify-content: space-between;
+}
+
+.city p:first-child {
+  color: rgba(235, 235, 245, 0.6);
+  font-size: 13px;
+  font-weight: 400;
+}
+.city p:last-child {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+}
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  width: 40%;
+}
+.rightSide > img {
+   width: 100%;
+}
+.weatherReport {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 20px;
+}
+
+/* bottom color  */
+
+.leftBotom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 352px;
+  height: 352px;
+  transform: rotate(106.834deg);
+  border-radius: 352px;
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    rgba(97, 47, 171, 0) 50.017388463020325deg,
+    #612fab 129.55134987831116deg,
+    rgba(97, 47, 171, 0) 226.05700492858887deg,
+    #612fab 269.28977251052856deg
+  );
+  filter: blur(98.32402801513672px);
+}
+.rightBotom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 172.848px;
+  height: 157.729px;
+  transform: rotate(-62.584deg);
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    rgba(97, 47, 171, 0) 50.017388463020325deg,
+    #612fab 129.55134987831116deg,
+    rgba(97, 47, 171, 0) 226.05700492858887deg,
+    #612fab 269.28977251052856deg
+  );
+  filter: blur(101.95531463623047px);
+}
+
+
+/* Media Query for all devices  */
+
+/* For desktop devices */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .heading {
+      font-size: 36px;
+    }
+   .search-bar{
+      display: flex;
+      flex-direction: column;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+    }
+    .card{
+        width: 100%;
+        padding: 30px;
+    }
+    .temp{
+        font-size: 45px;
+    }
+    .city p:first-child {
+        font-size: 12px;
+      }
+      .city p:last-child {
+        font-size: 14px;
+      }
+      .weatherReport{
+        font-size: 14px;
+      }
+
+  }
+  
+@media screen and (min-width: 320px) and (max-width: 767px) {
+   .heading{
+    font-size: 36px;
+   }
+   .search-bar {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+  }
+  .inputField{
+    width: 100%;
+    font-size: 14px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    margin: 20px;
+    gap: 60px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .temp {
+    font-size: 45px;
+  }
+
+  .city p:first-child {
+    font-size: 12px;
+  }
+
+  .city p:last-child {
+    font-size: 14px;
+  }
+
+  .weatherReport {
+    font-size: 14px;
+  }
+
+  .search-area{
+    width: 80%;
+    margin: auto;
+  }
+  .leftSide{
+  margin-top: 20px;
+  }
+}
